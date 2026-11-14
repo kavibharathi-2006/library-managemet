@@ -5,7 +5,7 @@ import { Html5QrcodeScanner } from "html5-qrcode";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-const API = "http://localhost:5000/api";
+const API = "https://bookbridge-backend-ar5g.onrender.com/api";
 const SLOTS = [
   "09:00-11:00",
   "11:00-13:00",
