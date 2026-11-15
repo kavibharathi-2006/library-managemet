@@ -30,11 +30,11 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        working-directory: Library Management/frontend
+        working-directory: "library managemnt/frontend"
         run: npm install
 
       - name: Build frontend
-        working-directory: Library Management/frontend
+        working-directory: "library managemnt/frontend"
         env:
           PUBLIC_URL: /${{ github.event.repository.name }}
           CI: false
@@ -46,11 +46,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Library Management/frontend/build
+          path: "library managemnt/frontend/build"
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
